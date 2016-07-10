@@ -5,8 +5,7 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-
-const API_KEY = 'AIzaSyBv20z2sRAEnXu-7oD9zfg5q6FvmM2gPMw';
+import ApiKey from '../secrets';
 
 
 class App extends Component {
@@ -18,7 +17,7 @@ class App extends Component {
 			selectedVideo: null
 		};
 
-		YTSearch({key: API_KEY, term: 'pusherman'}, (videos) => {
+		YTSearch({key: ApiKey.API_KEY, term: 'pusherman'}, (videos) => {
 			this.setState({ 
 				videos: videos,
 				selectedVideo: videos[0]
