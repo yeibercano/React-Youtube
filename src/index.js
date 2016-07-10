@@ -17,19 +17,23 @@ class App extends Component {
 			selectedVideo: null
 		};
 
-		YTSearch({key: ApiKey.API_KEY, term: 'pusherman'}, (videos) => {
+		this.videoSearch('pusherman')
+	}
+
+	videoSearch(term) {
+		YTSearch({key: ApiKey.API_KEY, term: term }, (videos) => {
 			this.setState({ 
 				videos: videos,
 				selectedVideo: videos[0]
-			})
-		})
+			});
+		});
 	}
 
   render() {
 		return ( 
 			<div>
 		    <h1 className='title'> React - Redux  </h1>
-	      <SearchBar /> 
+	      <SearchBar onSearchTermChange= {term => this.videoSearch(term)}/> 
 	      <VideoDetail video={this.state.selectedVideo}/>
 	      <VideoList 
   				onVideoSelect={selectedVideo => this.setState({selectedVideo})}
