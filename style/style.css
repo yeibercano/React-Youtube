@@ -30,3 +30,14 @@
 	background-color: #eee;
 }
 
+    /* WebKit browsers */
+input:focus::-webkit-input-placeholder { color:transparent; }
+
+    /* Mozilla Firefox 4 to 18 */
+input:focus:-moz-placeholder { color:transparent; }
+
+    /* Mozilla Firefox 19+ */
+input:focus::-moz-placeholder { color:transparent; }
+
+    /* Internet Explorer 10+ */
+input:focus:-ms-input-placeholder { color:transparent; }
