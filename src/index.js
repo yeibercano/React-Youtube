@@ -9,8 +9,8 @@ const API_KEY = 'AIzaSyBv20z2sRAEnXu-7oD9zfg5q6FvmM2gPMw';
 
 const App = () => {
 	return ( 
-		<div className='title'>
-	    React - Redux - Webpack - Node - PostCSS 
+		<div>
+	    <h1 className='title'> React - Redux  </h1>
       <SearchBar /> 
 	  </div>
 	);  
